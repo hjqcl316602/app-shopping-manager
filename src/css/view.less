@@ -1,0 +1,54 @@
+@import "theme";
+
+
+
+//******************************************* 主页 ****************************************/
+.vi-main{ width: 100vw;height:100vh ; padding-top: 50px; position: relative }
+.vi-main--header{ position: absolute;left:0;top:0;width: 100%;height:50px;background-color: @color-theme}
+.vi-main--center{ padding-left: 250px;position: relative ; width: 100%;height:100%;}
+.vi-main--left{ width: 250px;height:100%; position: absolute ; left:0;top:0; overflow: auto ; }
+.vi-main--left{ background-color: #fff; box-shadow: 0 2px 2px rgba(0,0,0,0.2) }
+.vi-main--content{ padding: 20px; width: 100%;height:100%;overflow: auto}
+// 导航
+.vi-nav{  }
+.vi-nav__item{  cursor: pointer ;  }
+
+.vi-nav__item .vi-nav__item--title { height:50px; display: flex ; justify-content: space-between ;align-items: center;padding: 0 20px; }
+.vi-nav__item  .vi-nav__item--title:hover{ background-color: rgba(0,0,0,.05)}
+.vi-nav__item .vi-nav__item--title .text{ color:@color-dark;font-size:16px;font-weight: 800;  }
+.vi-nav__item .vi-nav__item--title .icon{ color:@color-dark;font-size:16px;font-weight: 800 ;transition:  all 0.5s ;  }
+.vi-nav__item .vi-nav-sub { max-height: 0;transition:  all 0.5s ;overflow: hidden; }
+.vi-nav__item .vi-nav-sub__item{ height: 50px;  line-height: 50px;padding: 0 20px 0 40px; font-size: 16px; }
+.vi-nav__item .vi-nav-sub__item:hover{background-color: rgba(0,0,0,.05) }
+
+.vi-nav__item.active{ height:auto;}
+.vi-nav__item.active .vi-nav-sub { max-height: 1000px }
+.vi-nav__item.active .vi-nav__item--title .icon{  transform: rotate(45deg)  }
+.vi-nav__item  .vi-nav-sub__item.active { color:@color-theme }
+/*.vi-nav--item span{ color: #fff;font-size: 18px;}
+.vi-nav--item.active span{ color: @color-theme;font-size: 18px;}
+.vi-nav--item:hover{ background-color: #515a63 }*/
+
+.avatar-uploader .el-upload {
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.avatar-uploader .el-upload:hover {
+  border-color: #ed665c;
+}
+.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 178px;
+  height: 178px;
+  line-height: 178px;
+  text-align: center;
+}
+.avatar {
+  width: 178px;
+  height: 178px;
+  display: block;
+}
